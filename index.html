@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-------------- REMIX ICONS LINK ----------->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--------------- FONT AWESOME LINK --------------------->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+
+    <!--------------- GOOGLE ICONS LINK ---------------------->
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
+    />
+
+    <!-------------- CSS LINK ----------------->
+    <link rel="stylesheet" href="styles.css" />
+    <title>MedicalAs</title>
+
+    <!------------- SCROLL REVEAL LINK --------------> 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+  </head>
+  <body>
+    <header>
+      <nav class="section__container nav__container">
+        <div class="nav-logo"><a href="index.html">Medical<span>As</span></a></div>
+
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+        <button class="navbar-burger" type="button" onclick="toggleMenuOpen()">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </button>
+
+      <nav class="navbar-menu">
+        <ul>
+          <li class="link"><a href="#">Acasa</a></li>
+          <li class="link"><a href="#">Servicii</a></li>
+          <li class="link"><a href="#">Prețuri</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+          <li class="contact-link">Contact<a href=""></a></li>
+        </ul>
+      </nav>
+        
+        <button class="btn">Contact</button>
+      </nav>
+      <div class="header__container">
+        <div class="header-content">
+          <h1>Asigurând o experiență deosebită pentru pacient</h1>
+          <p>
+            Echipa MedicalAs, formată din profesioniști dedicați și empatici, pune pacientul în centrul atenției, oferind tratamente personalizate și sigure. Încrederea, devotamentul și respectul pentru indicațiile medicale definesc abordarea noastră atentă.
+          </p>
+          <a class="btn header-btn">Servicii oferite</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container service__container">
+      <div class="service__header">
+        <div class="service__header__content">
+          <h2 class="section__header">Misiunea Noastră</h2>
+          <p>
+            Dincolo de simpla furnizare de îngrijire medicală, angajamentul nostru constă în oferirea unui serviciu personalizat, adaptat nevoilor tale unice.
+          </p>
+        </div>
+        <button class="service__btn">Descoperă servicii</button>
+      </div>
+      <div class="service__grid">
+        <div class="service__card">
+          <span><i class="fa-solid fa-droplet"></i></span>
+          <h4>Perfuzie intravenoasă</h4>
+          <p>
+            Terapie intravenoasă la domiciliu: Confort, Siguranță, Conveniență.
+          </p>
+          <a href="#">Află mai multe</a>
+        </div>
+        <div class="service__card">
+          <span><i class="ri-mental-health-line"></i></span>
+          <h4>Psihoterapie</h4>
+          <p>
+            Arta vindecării printr-o relație terapeutică de încredere.
+          </p>
+          <a href="#">Află mai multe</a>
+        </div>
+        <div class="service__card">
+          <span><i class="fa-solid fa-pills"></i></span>
+          <h4>Gestionarea medicamentelor</h4>
+          <p>
+            Administrare substanțelor în organism: căi și efecte.
+          </p>
+          <a href="#">Află mai multe</a>
+        </div>
+      </div>
+    </section>
+    <section class="section__container about__container">
+      <div class="about__content">
+        <h2 class="section__header">Despre noi</h2>
+        <p>
+          În perspectivă clinică, boala nu se limitează la simptome sau plângeri fizice, 
+          ci afectează profund viața psihică a pacientului. 
+          Diagnosticul nu doar că atestă starea de boală, 
+          ci și determină un comportament structurat în jurul acesteia. 
+          Unele afecțiuni se vindecă natural, altele necesită tratamente specifice, 
+          iar în cazurile incurabile, terapia durerii și îngrijirile paliative devin esențiale. 
+        </p>
+        <p>
+          Echipa MedicalAs își propune să fie alături de dumneavoastră pe parcursul acestei călătorii, 
+          oferind îngrijiri medicale la domiciliu pentru a asigura confortul, 
+          intimitatea și siguranța necesare. Astfel, veți evita deplasările în oraș și riscurile asociate 
+          cu mediul spitalicesc. Cu empatie, profesionalism și atenție la detalii, echipa noastră este 
+          dedicată îmbunătățirii stării dumneavoastră de sănătate, recunoscând că sănătatea este esențială.
+        </p>
+
+        
+      </div>
+      <div class="about__image">
+        <img src="/assets/plimbare.png" alt="about" />
+      </div>
+    </section>
+
+    <section class="section__container why__container">
+      <div class="why__image">
+        <img src="assets/holding-hands.png" alt="why choose us" />
+      </div>
+      <div class="why__content">
+        <h2 class="section__header">De ce să ne alegeți pe noi?</h2>
+        <p class="why__content-animation">
+          Cu un angajament ferm față de bunăstarea dumneavoastră, 
+          echipa noastră de profesioniști medicali extrem de bine pregătiți se asigură că 
+          aveți parte de îngrijiri de excepție.
+        </p>
+        <div class="why__grid">
+          <span><i class="fa-solid fa-hand-holding-heart"></i></span>
+          <div>
+            <h4>Comunicare Deschisă și Transparentă</h4>
+            <p>
+              Menținem o comunicare deschisă cu pacienții și familiile, 
+              asigurându-ne că sunteți mereu informați și sprijiniți.
+            </p>
+          </div>
+          <span><i class="fa-solid fa-truck-medical"></i></span>
+          <div>
+            <h4>Servicii Flexibile și Intervenție Promptă</h4>
+            <p>
+              Oferim servicii flexibile și accesibile, intervenind rapid pentru a asigura îngrijirea necesară.
+            </p>
+          </div>
+          <span><i class="fa-solid fa-house-medical"></i></span>
+          <div>
+            <h4>Îngrijire Personalizată pentru Fiecare Pacient</h4>
+            <p>
+              Adaptăm serviciile la nevoile unice ale fiecărui pacient, 
+              oferind îngrijire personalizată și atentă.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container doctors__container">
+      <div class="doctors__header">
+        <div class="doctors__header__content">
+          <h2 class="section__header">Fă cunoștință cu echipa</h2>
+          <p>
+            Suntem dedicați să oferim îngrijire medicală compasională 
+            și de înaltă calitate pentru persoanele în vârstă, 
+            concentrându-ne asupra bunăstării și confortului lor.
+          </p>
+        </div>
+      </div>
+
+      <div class="doctors-and-form-container">
+        <div class="doctors-card">
+          <div class="doctors__card__image">
+            <img src="assets/asistent medical.jpg" alt="doctor" />
+            <div class="doctors__socials">
+              <span><i class="ri-facebook-fill"></i></span>
+            </div>
+          </div>
+          <h4>Roxana Vasile</h4>
+          <p>Asistent Medical</p>
+        </div>
+
+        <div class="form-container">
+          <div class="form-message">
+            <p>Lasă-ne un mesaj</p>
+            <span class="message-icon">
+              <i class="ri-message-2-fill"></i>
+            </span>
+          </div>
+          
+
+          <form action="https://formspree.io/f/xayrvaap" method="post">
+            <div class="form-group">
+              <label for="name">Nume</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mesaj</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+    </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Medical<span>As</span></h3>
+          <p>
+            Suntem onorați să facem parte din parcursul dumneavoastră medical și ne dedicăm să vă 
+            oferim îngrijire personalizată și de cea mai bună calitate pe tot parcursul acestuia.
+          </p>
+          <p class="no-show">
+            Acordați-ne încrederea dumneavoastră în îngrijirea sănătății și haideți să colaborăm 
+            pentru a atinge cele mai bune rezultate pentru dumneavoastră și pentru cei dragi.
+          </p>
+        </div>
+
+        <div class="footer__col footer-links">
+          <h4>Descoperă</h4>
+          <p>Acasă</p>
+          <p>Servicii</p>
+          <p>Prețuri</p>
+          <p>Blog</p>
+        </div>
+
+        <div class="footer__col social-media-link">
+          <h4>Social Media</h4>
+          <span>
+            <a href="https://www.facebook.com/profile.php?id=100088809708240" target="_blank">
+              <i class="ri-facebook-circle-line"></i>
+            </a>
+          </span>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contactați-ne</h4>
+          <p>
+            <a href="https://www.google.com/maps/search/Adres%C4%83:+Str.+George+Enescu+nr.34,+Ap.1,+Sector+1/@44.444322,26.0963179,17z/data=!3m1!4b1?entry=ttu">
+              <i class="ri-map-pin-2-fill"></i> Adresă: Str. George Enescu nr.34, Ap.1, Sector 1
+            </a>
+          </p>
+
+          <p>
+            <a href="mailto:office@medicalas.ro"><i class="ri-mail-fill"></i> office@medicalas.ro</a>
+          </p>
+
+          <p>
+            <a href="tel:+40730029288"><i class="ri-phone-fill"></i>+40730029288</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p>Copyright © Terra MedicalAs srl 2022. Toate drepturile rezervate.</p>
+          <div class="footer__socials">
+            <span>Made By Bau David <i class="fa-regular fa-heart"></i> </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+  </body>
+</html>
