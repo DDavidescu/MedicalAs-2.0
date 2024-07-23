@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedicalAs - Preturi</title>
+
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-------------- REMIX ICONS LINK ----------->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+
+    <!--------------- GOOGLE ICONS LINK ---------------------->
+    <link rel="stylesheet" 
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
+    />
+
+    <!------------- SCROLL REVEAL LINK --------------> 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- CSS FOR PRICES -->
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+
+
+/* -----------COLOR VARIABLES-------------- */
+:root {
+    --primary-color: #FF8A80;
+    --primary-color-dark: #8E0000;
+    --primary-color-light: #e9f7f7;
+    --secondary-color: #D32F2F;
+    --text-dark: #4E342E;
+    --text-light: #6D4C41;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+.pricing-section h1{
+    text-align: center;
+    padding: 1rem 1rem 3rem 1rem; 
+    color: var(--primary-color);
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0,0,0,0.7);
+}
+
+.wrapper .card{
+    font-family: "Poppins", sans-serif;
+    max-width: 300px;
+    background-color: var(--primary-color-light);
+    padding: 40px;
+    margin: 30px 15px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(255, 138, 128, 0.4),
+    3px 3px 10px -1px rgba(255,255,255,0.7);
+}
+
+/* For Active Card */
+.wrapper .card.active{
+    background-color: var(--primary-color);
+    transform: scale(1, 1.09);
+}
+
+.wrapper .card h3{
+    margin-bottom: 15px;
+}
+
+/* For Active Card */
+.wrapper .card.active{
+   color: rgba(255,255,255,1);;
+}
+
+.wrapper .card h5{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: rgba(0,0,0,1);
+}
+/* For Active Card */
+.wrapper .card.active h5{
+    color: rgba(255,255,255,1);;
+ }
+ 
+
+.wrapper .card h5 span{
+    font-size: 12px;
+    color: rgba(0,0,0,0.7);
+}
+
+/* For Active Card */
+.wrapper .card.active h5 span{
+    color: rgba(255,255,255,0.9);;
+ }
+ 
+
+.wrapper .card p{
+    margin: 20px 0;
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* For Active Card */
+.wrapper .card.active p{
+    color: rgba(255,255,255,1);;
+ }
+ 
+
+.wrapper .card ul{
+    list-style: none;
+}
+
+.wrapper .card ul li{
+    line-height: 3;
+    color: rgba(0,0,0,0.9);
+}
+
+/* For Active Card */
+.wrapper .card.active ul li{
+    color: rgba(255,255,255,0.9);;
+ }
+ 
+
+.wrapper .card ul li i{
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* For Active Card */
+.wrapper .card.active ul li i{
+    color: var(--secondary-color);
+ }
+ 
+
+.wrapper .card a{
+    margin: 20px 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+/* For Active Card */
+.wrapper .card.active a{
+   background-color: white;
+   color: var(--secondary-color);
+ }
+ 
+.wrapper .card a:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* For Active Card */
+.wrapper .card.active a:hover{
+   border: 1px solid var(--secondary-color);
+   background-color: var(--secondary-color);
+  }
+  
+/* TABLE SECTION CSS */
+#table-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+#table-section-header {
+    color: var(--primary-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-style: italic;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #808080;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+}
+
+th {
+    background-color: var(--primary-color-light);
+}
+        
+.table-price {
+    text-align: center;
+}
+
+.service-table-row:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    background-color: var(--primary-color-light);
+}
+
+
+/* NAVBAR CUSTOMIZATION */
+.nav-logo a{
+    color: var(--primary-color);
+}
+
+ .navbar-menu .link a{
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+ .navbar-menu .link a:hover{
+    color: var(--primary-color);
+}
+
+ @media (width < 700px){
+    .navbar-menu .link a{
+        color: var(--primary-color-light);
+    }
+
+     .navbar-menu .link a:hover{
+        color: var(--white);
+    }
+}
+
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1200px){
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .active{
+        order: -1;
+    }
+}
+ </style>
+
+
+
+
+</head>
+<body>
+
+    <nav class="section__container nav__container">
+        <div class="nav-logo"><a href="index.html">Medical<span>As</span></a></div>
+
+        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+        <button class="navbar-burger" type="button" onclick="toggleMenuOpen()">
+          <span class="material-symbols-outlined">
+            menu
+          </span>
+        </button>
+
+      <nav class="navbar-menu">
+        <ul>
+          <li class="link"><a href="index.html">Acasa</a></li>
+          <li class="link"><a href="services.html">Servicii</a></li>
+          <li class="link"><a href="#">Prețuri</a></li>
+          <li class="link"><a href="#">Blog</a></li>
+          <li class="contact-link">Contact<a href=""></a></li>
+        </ul>
+      </nav>
+        
+        <button class="btn">Contact</button>
+    </nav>
+
+    <section class="pricing-section">
+    <h1>Fiecare pachet poate fi personalizat in funcție de nevoile pacientului!</h1>
+        <div class="pricing-container">
+            <div class="wrapper">
+                <div class="card">
+                    <h3>Intro</h3>
+                    <h5>1.700 Lei <span>/ Lună</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                    </ul>
+                    <a href="">Alege Planul</a>
+
+                </div>
+
+                <div class="card">
+                    <h3>Base</h3>
+                    <h5>2.000 Lei <span>/ Lună</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                    </ul>
+                    <a href="">Alege Planul</a>
+
+                </div>
+
+
+                <div class="card active">
+                    <h3>Popular</h3>
+                    <h5>2.400 Lei <span>/ Lună</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                    </ul>
+                    <a href="">Alege Planul</a>
+
+                </div>
+
+
+                <div class="card">
+                    <h3>Premium</h3>
+                    <h5>3.600 Lei <span>/ Lună</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                    </ul>
+                    <a href="">Alege Planul</a>
+
+                </div>
+
+                <div class="card">
+                    <h3>Ultimate</h3>
+                    <h5>5.500 Lei <span>/ Lună</span></h5>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <ul>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                    </ul>
+                    <a href="">Alege Planul</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- TABLE SECTION -->
+    <section id="table-section">
+      <h2 id="table-section-header">Listă de prețuri pentru manevrele medicale</h2>
+      
+      <table>
+          <tr>
+              <th>SERVICIU</th>
+              <th class="table-price">PREȚ (RON)</span>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrarea tratamentului injectabil intravenous</td>
+              <td class="table-price">90</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrarea tratamentului injectabil intramuscular</td>
+              <td class="table-price">90</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrarea tratamentului injectabil intradermic</td>
+              <td class="table-price">90</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrarea tratamentului injectabil subcutanat</td>
+              <td class="table-price">90</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Testare sensibilitate antibiotic</td>
+              <td class="table-price">90</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrare vaccinuri</td>
+              <td class="table-price">100</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Montare sondă urinară</td>
+              <td class="table-price">250</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Verificare sondă urinară</td>
+              <td class="table-price">150</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Extragere sondă urinară</td>
+              <td class="table-price">150</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Spălatură vezicala</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Manoperă tratament/pansament escară (prima vizită)</td>
+              <td class="table-price">300</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Manopera tratament/pansament escară (ulterior)</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Scoaterea firelor postoperatorii</td>
+              <td class="table-price">170</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Schimbare pansament postoperator</td>
+              <td class="table-price">150</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Pansament plagă infectată</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Spalatură auriculară, o ureche</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Prindere linie venoasă (branulă)</td>
+              <td class="table-price">50</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrare perfuzie 250 ml</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrare perfuzie 500 ml</td>
+              <td class="table-price">300</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Clisma in scop evacuator</td>
+              <td class="table-price">240</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Tușeu rectal cu evacuare</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Administrare microclismă</td>
+              <td class="table-price">130</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Monitorizare funcții vitale</td>
+              <td class="table-price">180</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Organizarea medicației orale</td>
+              <td class="table-price">100</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Pachet monitorizare funcții vitale + glicemie + organe medicale</td>
+              <td class="table-price">240</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Toaletare parțială</td>
+              <td class="table-price">150</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Toaletare completă</td>
+              <td class="table-price">200</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Recoltare probe sânge</td>
+              <td class="table-price">150</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Recoltare exudat faringian, axilar, rectal etc</td>
+              <td class="table-price">100</td>
+          </tr>
+          <tr class="service-table-row">
+              <td>Recoltare probe sânge + probe urină</td>
+              <td class="table-price">270</td>
+          </tr>
+      </table>
+      </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <h3>Medical<span>As</span></h3>
+            <p>
+              Suntem onorați să facem parte din parcursul dumneavoastră medical și ne dedicăm să vă 
+              oferim îngrijire personalizată și de cea mai bună calitate pe tot parcursul acestuia.
+            </p>
+            <p class="no-show">
+              Acordați-ne încrederea dumneavoastră în îngrijirea sănătății și haideți să colaborăm 
+              pentru a atinge cele mai bune rezultate pentru dumneavoastră și pentru cei dragi.
+            </p>
+          </div>
+  
+          <div class="footer__col footer-links">
+            <h4>Descoperă</h4>
+            <p>Acasă</p>
+            <p>Servicii</p>
+            <p>Prețuri</p>
+            <p>Blog</p>
+          </div>
+  
+          <div class="footer__col social-media-link">
+            <h4>Social Media</h4>
+            <span>
+              <a href="https://www.facebook.com/profile.php?id=100088809708240" target="_blank">
+                <i class="ri-facebook-circle-line"></i>
+              </a>
+            </span>
+          </div>
+  
+          <div class="footer__col">
+            <h4>Contactați-ne</h4>
+            <p>
+              <a href="https://www.google.com/maps/search/Adres%C4%83:+Str.+George+Enescu+nr.34,+Ap.1,+Sector+1/@44.444322,26.0963179,17z/data=!3m1!4b1?entry=ttu">
+                <i class="ri-map-pin-2-fill"></i> Adresă: Str. George Enescu nr.34, Ap.1, Sector 1
+              </a>
+            </p>
+  
+            <p>
+              <a href="mailto:office@medicalas.ro"><i class="ri-mail-fill"></i> office@medicalas.ro</a>
+            </p>
+  
+            <p>
+              <a href="tel:+40730029288"><i class="ri-phone-fill"></i>+40730029288</a>
+            </p>
+          </div>
+        </div>
+        <div class="footer__bar">
+          <div class="footer__bar__content">
+            <p>Copyright © Terra MedicalAs srl 2022. Toate drepturile rezervate.</p>
+            <div class="footer__socials">
+              <span>Made By Bau David <i class="fa-regular fa-heart"></i> </span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
