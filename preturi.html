@@ -47,14 +47,14 @@
 
 .pricing-section h1{
     text-align: center;
-    padding: 1rem 1rem 3rem 1rem; 
+    padding: 1rem 1rem 5rem 1rem; 
     color: var(--primary-color);
 }
 
 .wrapper{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     color: rgba(0,0,0,0.7);
 }
 
@@ -62,7 +62,7 @@
     font-family: "Poppins", sans-serif;
     max-width: 300px;
     background-color: var(--primary-color-light);
-    padding: 40px;
+    padding: 20px;
     margin: 30px 15px;
     border-radius: 10px;
     box-shadow: 5px 5px 20px rgba(255, 138, 128, 0.4),
@@ -73,6 +73,7 @@
 .wrapper .card.active{
     background-color: var(--primary-color);
     transform: scale(1, 1.09);
+    font-weight: 500;
 }
 
 .wrapper .card h3{
@@ -96,8 +97,12 @@
  
 
 .wrapper .card h5 span{
-    font-size: 12px;
+    font-size: 15px;
     color: rgba(0,0,0,0.7);
+}
+
+.wrapper .card h6 {
+    font-size: 16px;
 }
 
 /* For Active Card */
@@ -289,83 +294,114 @@ th {
     </nav>
 
     <section class="pricing-section">
-    <h1>Fiecare pachet poate fi personalizat in funcție de nevoile pacientului!</h1>
+    <h1>Vă propunem câteva pachete de îngrijire la domiciliu, care pot fi personalizate în funcție de nevoile fiecărui pacient!</h1>
         <div class="pricing-container">
             <div class="wrapper">
                 <div class="card">
                     <h3>Intro</h3>
-                    <h5>1.700 Lei <span>/ Lună</span></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <h5>960 lei<span> / Lună</span></h5>
+                    <h6>240 lei<span> / Săptămână</span></h6>
+                    <p>Acest pachet include vizite la domiciliu, cu o durată de 2 ore pe zi, timp de 2 zile pe săptămână.</p>
                     <ul>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Îmbrăcare / Dezbrăcare </li>
+                        <li><i class="fa-solid fa-square-check"></i> Pregătirea medicației / Administrarea medicației </li>
+                        <li><i class="fa-solid fa-square-check"></i> Igiena corporală </li>
+                        <li><i class="fa-solid fa-square-check"></i> Ridicarea rețetelor </li>
+                        <li><i class="fa-solid fa-square-check"></i> Efectuarea cumpărăturilor </li>
+                        <li><i class="fa-solid fa-square-check"></i> Plata facturilor </li>
+                        <li><i class="fa-solid fa-square-check"></i> Companie și socializare</li>
                     </ul>
-                    <a href="">Alege Planul</a>
+                    <a href="contact.html">Alege Planul</a>
 
                 </div>
 
                 <div class="card">
                     <h3>Base</h3>
-                    <h5>2.000 Lei <span>/ Lună</span></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <h5>1.440 lei<span> / Lună</span></h5>
+                    <h6>360 lei<span> / Săptămână</span></h6>
+                    <p>Acest pachet include vizite la domiciliu, cu o durată de 2 ore pe zi, timp de 3 zile pe săptămână.</p>
                     <ul>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i> Îmbrăcare / Dezbrăcare </li>
+                        <li><i class="fa-solid fa-square-check"></i> Pregătirea medicației / Administrarea medicației </li>
+                        <li><i class="fa-solid fa-square-check"></i> Igiena corporală </li>
+                        <li><i class="fa-solid fa-square-check"></i> Ridicarea rețetelor </li>
+                        <li><i class="fa-solid fa-square-check"></i> Efectuarea cumpărăturilor </li>
+                        <li><i class="fa-solid fa-square-check"></i> Plata facturilor </li>
+                        <li><i class="fa-solid fa-square-check"></i> Companie și socializare </li>
                     </ul>
-                    <a href="">Alege Planul</a>
+                    <a href="contact.html">Alege Planul</a>
 
                 </div>
 
 
                 <div class="card active">
                     <h3>Popular</h3>
-                    <h5>2.400 Lei <span>/ Lună</span></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <h5>1.750 Lei <span>/ Lună</span></h5>
+                    <h6>438 Lei <span>/ Săptămână</span></h6>
+                    <p>Acest pachet include vizite la domiciliu, cu o durată de 3 ore pe zi, timp de 2 zile pe săptămână.</p>
                     <ul>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i>Igienă corporală</li>
+                        <li><i class="fa-solid fa-square-check"></i>Îmbrăcare și dezbrăcare</li>
+                        <li><i class="fa-solid fa-square-check"></i>Igiena corporală</li>
+                        <li><i class="fa-solid fa-square-check"></i>Hrănire și hidratare</li>
+                        <li><i class="fa-solid fa-square-check"></i>Prepararea hranei, ajutor la prepararea acesteia sau livrarea acesteia</li>
+                        <li><i class="fa-solid fa-square-check"></i>Ridicarea rețetelor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Administrarea medicamentelor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Efectuarea de cumpărături</li>
+                        <li><i class="fa-solid fa-square-check"></i>Plata facturilor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Activități de menaj ușor (aspirat, schimbarea lenjeriei de pat, curățarea hainelor doar la mașina automată de rufe)</li>
+                        <li><i class="fa-solid fa-square-check"></i>Companie și socializare</li>
                     </ul>
-                    <a href="">Alege Planul</a>
+                    <a href="contact.html">Alege Planul</a>
 
                 </div>
 
 
                 <div class="card">
                     <h3>Premium</h3>
-                    <h5>3.600 Lei <span>/ Lună</span></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <h5>2.600 Lei <span>/ Lună</span></h5>
+                    <h6>650 Lei <span>/ Săptămână</span></h6>
+                    <p>Acest pachet include vizite la domiciliu, cu o durată de 3 ore pe zi, timp de 3 zile pe săptămână.</p>
                     <ul>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i>Igienă corporală</li>
+                        <li><i class="fa-solid fa-square-check"></i>Îmbrăcare și dezbrăcare</li>
+                        <li><i class="fa-solid fa-square-check"></i>Igiena corporală</li>
+                        <li><i class="fa-solid fa-square-check"></i>Hrănire și hidratare</li>
+                        <li><i class="fa-solid fa-square-check"></i>Prepararea hranei, ajutor la prepararea acesteia sau livrarea acesteia</li>
+                        <li><i class="fa-solid fa-square-check"></i>Ridicarea rețetelor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Administrarea medicamentelor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Efectuarea de cumpărături</li>
+                        <li><i class="fa-solid fa-square-check"></i>Plata facturilor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Activități de menaj ușor (aspirat, schimbarea lenjeriei de pat, curățarea hainelor doar la mașina automată de rufe)</li>
+                        <li><i class="fa-solid fa-square-check"></i>Însoțirea în mijloacele de transport</li>
+                        <li><i class="fa-solid fa-square-check"></i>Facilitarea deplasării în exterior</li>
+                        <li><i class="fa-solid fa-square-check"></i>Companie și socializare</li>
                     </ul>
-                    <a href="">Alege Planul</a>
+                    <a href="contact.html">Alege Planul</a>
 
                 </div>
 
                 <div class="card">
                     <h3>Ultimate</h3>
-                    <h5>5.500 Lei <span>/ Lună</span></h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                    <h5>5.280 Lei <span>/ Lună</span></h5>
+                    <h6>1.320 Lei <span>/ Săptămână</span></h6>
+                    <p>Acest pachet include vizite la domiciliu, cu o durată de 8 ore pe zi, timp de 5 zile pe săptămână.</p>
                     <ul>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
-                        <li><i class="fa-solid fa-square-check"></i> Lorem, ipsum. </li>
+                        <li><i class="fa-solid fa-square-check"></i>Igienă corporală</li>
+                        <li><i class="fa-solid fa-square-check"></i>Îmbrăcare și dezbrăcare</li>
+                        <li><i class="fa-solid fa-square-check"></i>Igiena corporală</li>
+                        <li><i class="fa-solid fa-square-check"></i>Hrănire și hidratare</li>
+                        <li><i class="fa-solid fa-square-check"></i>Prepararea hranei, ajutor la prepararea acesteia sau livrarea acesteia</li>
+                        <li><i class="fa-solid fa-square-check"></i>Ridicarea rețetelor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Administrarea medicamentelor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Efectuarea de cumpărături</li>
+                        <li><i class="fa-solid fa-square-check"></i>Plata facturilor</li>
+                        <li><i class="fa-solid fa-square-check"></i>Activități de menaj ușor (aspirat, schimbarea lenjeriei de pat, curățarea hainelor doar la mașina automată de rufe)</li>
+                        <li><i class="fa-solid fa-square-check"></i>Însoțirea în mijloacele de transport</li>
+                        <li><i class="fa-solid fa-square-check"></i>Facilitarea deplasării în exterior</li>
+                        <li><i class="fa-solid fa-square-check"></i>Companie și socializare</li>
                     </ul>
-                    <a href="">Alege Planul</a>
+                    <a href="contact.html">Alege Planul</a>
 
                 </div>
             </div>
