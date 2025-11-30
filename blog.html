@@ -1,226 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MedicalAs - Blog</title>
 
-
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-------------- REMIX ICONS LINK ----------->
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-    rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
 
     <!-- FONT AWESOME LINK -->
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-
-    <!--------------- GOOGLE ICONS LINK ---------------------->
-    <link rel="stylesheet" 
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
 
-    <!------------- SCROLL REVEAL LINK --------------> 
-    <script src="https://unpkg.com/scrollreveal"></script>    
+    <!--------------- GOOGLE ICONS LINK ---------------------->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
 
+    <!------------- SCROLL REVEAL LINK -------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17770196544"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-17770196544");
+    </script>
 
     <!--------------- CSS FOR BLOG PAGE ---------------------->
     <style>
+      /* ---BLOG SECTION--- */
+      :root {
+        --primary-color: #ff8a80;
+        --primary-color-dark: #8e0000;
+        --primary-color-light: #e9f7f7;
+        --secondary-color: #d32f2f;
+        --text-dark: #4e342e;
+        --text-light: #6d4c41;
+        --white: #ffffff;
+        --max-width: 1200px;
+      }
 
-/* ---BLOG SECTION--- */
-:root {
-    --primary-color: #FF8A80;
-    --primary-color-dark: #8E0000;
-    --primary-color-light: #e9f7f7;
-    --secondary-color: #D32F2F;
-    --text-dark: #4E342E;
-    --text-light: #6D4C41;
-    --white: #ffffff;
-    --max-width: 1200px;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: var(--primary-color-light);
-}
-
-#blog{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.blog-heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.blog-heading span{
-    color: var(--primary-color);
-}
-
-.blog-heading h3{
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    color: var(--text-dark);
-    font-weight: 600;
-}
-
-.blog-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0px;
-    flex-wrap: wrap;
-}
-
-.blog-box{
-    width: 350px;
-    height: 600px;
-    background-color: var(--white);
-    border: 1px solid #ececec;
-    margin: 20px;
-    border-radius: 5%;
-    transition: transform 0.3s ease-in-out;
-}
-
-.blog-box:hover{
-    transition: 0.3s;
-    transform: translateY(-3px);
-}
-
-.blog-img{
-    width: 100%;
-    height: 250px;
-}
-
-.blog-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 5% 5% 0 0;
-}
-
-.blog-text{
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-}
-
-.blog-text span{
-    color: var(--primary-color);
-    font-size: 0.9rem;
-}
-
-.blog-text .blog-title{
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #4E342E;
-    transition: all ease 0.3s;
-}
-
-.blog-text .blog-title:hover{
-    color: var(--primary-color);
-
-}
-
-.blog-text p{
-    color: #4E342E;
-    font-size: 0.9rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 20px 0px;
-}
-
-.blog-text a{
-    color: #000;
-    transition: all ease 0.3s;
-}
-
-.blog-text a:hover{
-    color: var(--primary-color);
-}
-
-/* NAVBAR CUSTOMIZATION */
-.nav-logo a{
-    color: var(--primary-color);
-}
-
- .navbar-menu .link a{
-    color: var(--text-dark);
-    transition: 0.3s;
-}
-
- .navbar-menu .link a:hover{
-    color: var(--primary-color);
-}
-
- @media (width < 700px){
-    .navbar-menu .link a{
-        color: var(--primary-color-light);
-    }
-
-     .navbar-menu .link a:hover{
-        color: var(--white);
-    }
-
-    #blog{
+      * {
         padding: 0;
-    }
-
-    .blog-heading{
-        padding-bottom: 20px;
-    }
-
-    .blog-container{
         margin: 0;
-    }
+        box-sizing: border-box;
+      }
 
-    .blog-box{
-        margin: 0 0 40px 0;
-    }
-}
+      body {
+        background-color: var(--primary-color-light);
+      }
 
-/* FOOTER CUSTOMIZATION */
-.footer{
-    background-color: var(--white);
-}
+      #blog {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
 
-.social-media-link span i{
-    background-color: var(--white);
-}
+      .blog-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
+      .blog-heading span {
+        color: var(--primary-color);
+      }
+
+      .blog-heading h3 {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: var(--text-dark);
+        font-weight: 600;
+      }
+
+      .blog-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+        flex-wrap: wrap;
+      }
+
+      .blog-box {
+        width: 350px;
+        height: 600px;
+        background-color: var(--white);
+        border: 1px solid #ececec;
+        margin: 20px;
+        border-radius: 5%;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .blog-box:hover {
+        transition: 0.3s;
+        transform: translateY(-3px);
+      }
+
+      .blog-img {
+        width: 100%;
+        height: 250px;
+      }
+
+      .blog-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 5% 5% 0 0;
+      }
+
+      .blog-text {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .blog-text span {
+        color: var(--primary-color);
+        font-size: 0.9rem;
+      }
+
+      .blog-text .blog-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: #4e342e;
+        transition: all ease 0.3s;
+      }
+
+      .blog-text .blog-title:hover {
+        color: var(--primary-color);
+      }
+
+      .blog-text p {
+        color: #4e342e;
+        font-size: 0.9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 20px 0px;
+      }
+
+      .blog-text a {
+        color: #000;
+        transition: all ease 0.3s;
+      }
+
+      .blog-text a:hover {
+        color: var(--primary-color);
+      }
+
+      /* NAVBAR CUSTOMIZATION */
+      .nav-logo a {
+        color: var(--primary-color);
+      }
+
+      .navbar-menu .link a {
+        color: var(--text-dark);
+        transition: 0.3s;
+      }
+
+      .navbar-menu .link a:hover {
+        color: var(--primary-color);
+      }
+
+      @media (width < 700px) {
+        .navbar-menu .link a {
+          color: var(--primary-color-light);
+        }
+
+        .navbar-menu .link a:hover {
+          color: var(--white);
+        }
+
+        #blog {
+          padding: 0;
+        }
+
+        .blog-heading {
+          padding-bottom: 20px;
+        }
+
+        .blog-container {
+          margin: 0;
+        }
+
+        .blog-box {
+          margin: 0 0 40px 0;
+        }
+      }
+
+      /* FOOTER CUSTOMIZATION */
+      .footer {
+        background-color: var(--white);
+      }
+
+      .social-media-link span i {
+        background-color: var(--white);
+      }
     </style>
+  </head>
 
-</head>
-
-
-<body>
+  <body>
     <!--------------------- NAV SECTION ------------------------------->
     <nav class="section__container nav__container">
-        <div class="nav-logo"><a href="index.html">Medical<span>As</span></a></div>
+      <div class="nav-logo">
+        <a href="index.html">Medical<span>As</span></a>
+      </div>
 
-        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
-        <button class="navbar-burger" type="button" onclick="toggleMenuOpen()">
-          <span class="material-symbols-outlined">
-            menu
-          </span>
-        </button>
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+      <button class="navbar-burger" type="button" onclick="toggleMenuOpen()">
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
 
       <nav class="navbar-menu">
         <ul>
@@ -231,267 +242,305 @@ body{
           <a href="contact.html"><li class="contact-link">Contact</li></a>
         </ul>
       </nav>
-        
+
       <a class="btn" href="contact.html">Contact</a>
     </nav>
 
-
     <!---------------------- BLOG SECTION ---------------------------->
     <section id="blog">
+      <div class="blog-heading">
+        <h3>Blogul nostru</h3>
 
-        <div class="blog-heading">
-            <h3>Blogul nostru</h3>
+        <span> Postări recente </span>
+      </div>
 
-            <span>
-                Postări recente
-            </span>
+      <div class="blog-container">
+        <!-- BLOG BOX 1 -->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="./assets/biofeedback.png" alt="Blog" />
+          </div>
+
+          <div class="blog-text">
+            <span>13 Decembrie 2023 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/roxana.vasile.18/posts/pfbid0xQo4yhX65aVToHa45h8H5ttF9krTxXGr3oAz4kCxrD8ZBoffMsa4GP6NMqghHckql"
+              class="blog-title"
+            >
+              Biofeedback-ul
+            </a>
+            <p>
+              Tehnica de biofeedback ajuta la îmbunătățirea tuturor funcțiilor
+              organismului , permițând persoanelor să își îmbunătățească starea
+              de sănătate și performanța. De exemplu, biofeedback-ul poate fi
+              utilizat în; tr...
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/roxana.vasile.18/posts/pfbid0xQo4yhX65aVToHa45h8H5ttF9krTxXGr3oAz4kCxrD8ZBoffMsa4GP6NMqghHckql"
+            >
+              Citește mai mult
+            </a>
+          </div>
         </div>
 
-        <div class="blog-container">
-            <!-- BLOG BOX 1 -->
-            <div class="blog-box">
+        <div class="blog-box">
+          <!-- BLOG BOX 2 -->
+          <div class="blog-img">
+            <img src="./assets/glutathione.png" alt="Blog" />
+          </div>
 
-                <div class="blog-img">
-                    <img src="./assets/biofeedback.png" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span>13 Decembrie 2023 / MedicalAs</span>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/roxana.vasile.18/posts/pfbid0xQo4yhX65aVToHa45h8H5ttF9krTxXGr3oAz4kCxrD8ZBoffMsa4GP6NMqghHckql" 
-                    class="blog-title">
-                    Biofeedback-ul
-                </a>
-                    <p>Tehnica de biofeedback ajuta la îmbunătățirea tuturor funcțiilor  organismului , 
-                        permițând persoanelor să își îmbunătățească starea de sănătate și 
-                        performanța. De exemplu, biofeedback-ul poate fi utilizat în; tr...
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/roxana.vasile.18/posts/pfbid0xQo4yhX65aVToHa45h8H5ttF9krTxXGr3oAz4kCxrD8ZBoffMsa4GP6NMqghHckql">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <!-- BLOG BOX 2 -->
-                <div class="blog-img">
-                    <img src="./assets/glutathione.png" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span>10 Septembrie 2023 / MedicalAs</span>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid037WVpf192NGEPwvdzzCL6ztDpXWNvgJH8jP1uCLXdv9pySfedAWHuXMmkBUBW4icZl&id=100088809708240" 
-                    class="blog-title">
-                    Beneficiile Glutationului
-                    </a>
-                    <p>Glutationul injectabil se administrează cu ajutorul unei perfuzii intravenoase, 
-                        care durează aproximativ 15-20 minute. Perfuzia nu este dureroasă iar riscurile injectării 
-                        intravenoase a glutationului sunt minime spre nule...
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/permalink.php?story_fbid=pfbid037WVpf192NGEPwvdzzCL6ztDpXWNvgJH8jP1uCLXdv9pySfedAWHuXMmkBUBW4icZl&id=100088809708240">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <!-- BLOG BOX 3 -->
-                <div class="blog-img">
-                    <img src="./assets/terapia biofotonica.jpg" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span>28 Septembrie 2023 / MedicalAs</span>
-                    <a
-                    target="_blank"
-                    href="https://www.facebook.com/photo?fbid=284944637809191&set=a.108675302102793" 
-                    class="blog-title">
-                    Terapia Biofotonică Transcraniană
-                    </a>
-                    <p>Terapia biofotonica transcraniană este o formă de terapie non-invazivă care utilizează 
-                        un dispozitiv medical special pentru a emite fotoni în regiunea craniana. 
-                        Emisia este coerenta concenrata și directionata fi....
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/photo?fbid=284944637809191&set=a.108675302102793">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <!-- BLOG BOX 4 -->
-                <div class="blog-img">
-                    <img src="./assets/Alergie Medicamente.jpg" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span>17 August 2024 / MedicalAs</span>
-                    <a
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26210858125224809&id=100001819359749&rdid=4r37E5fR6YRVV46L" 
-                    class="blog-title">
-                    Alergiile la medicamente: Recunoaștere, prevenție și acțiuni rapide
-                    </a>
-                    <p>Alergia la medicamente poate fi gravă și periculoasă pentru viață. Este esențial să recunoști simptomele și să eviți 
-                        medicamentele care provoacă reacții alergice. În caz de reacții severe, administrează epinefrină și caută...
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26210858125224809&id=100001819359749&rdid=4r37E5fR6YRVV46L">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <!-- BLOG BOX 5 -->
-                <div class="blog-img">
-                    <img src="./assets/Tumorile sistemului nervos.jpg" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span> 13 Septembrie 2024 / MedicalAs</span>
-                    <a
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26508281652149120&id=100001819359749&rdid=cRRJhCR5dYYJnkjX" 
-                    class="blog-title">
-                    Tumorile sistemului nervos central: Cauze, simptome și tratament
-                    </a>
-                    <p>
-                        Tumorile sistemului nervos central, benigne sau maligne, apar din creșterea necontrolată a celulelor anormale. 
-                        Cauzele includ expunerea la radiatii, factori genetici și înaintarea în vârstă. Simptomele includ...
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26508281652149120&id=100001819359749&rdid=cRRJhCR5dYYJnkjX">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <!-- BLOG BOX 6 -->
-                <div class="blog-img">
-                    <img src="./assets/perfuzii cu vitamine.jpg" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span> 6 Octombrie 2024 / MedicalAs</span>
-                    <a
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26897310543246227&id=100001819359749&rdid=g2UtDU0R5bxjpyAE" 
-                    class="blog-title">
-                    Perfuziile cu vitamine: Beneficii și componente esențiale
-                    </a>
-                    <p>
-                        Perfuziile cu vitamine oferă nutrienți rapid prin administrare intravenoasă, ajutând la corectarea deficiențelor, 
-                        îmbunătățirea stării de sănătate și recuperarea după efort sau boală. Acestea conțin vitamine...
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26897310543246227&id=100001819359749&rdid=g2UtDU0R5bxjpyAE">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
-
-            <div class="blog-box">
-                <!-- BLOG BOX 7 -->
-                <div class="blog-img">
-                    <img src="./assets/ingrijire varstnici.jpg" alt="Blog">
-                </div>
-
-                <div class="blog-text">
-                    <span> 9 Octombrie 2024 / MedicalAs</span>
-                    <a
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26954836044160343&id=100001819359749&rdid=WlWno4ViZhh46h9E" 
-                    class="blog-title">
-                    Servicii de îngrijire la domiciliu pentru vârstnici
-                    </a>
-                    <p>
-                        Oferim servicii de îngrijire la domiciliu pentru vârstnici, inclusiv ajutor la igienă, îmbrăcare, 
-                        pregătirea meselor și administrarea tratamentelor. 
-                        Echipa noastră se dedică cu empatie și respect pentru a aduce confort și zâmbete în viețile pacienților...
-                    </p>
-                    <a 
-                    target="_blank"
-                    href="https://www.facebook.com/story.php?story_fbid=26954836044160343&id=100001819359749&rdid=WlWno4ViZhh46h9E">
-                    Citește mai mult
-                    </a>
-                </div>
-            </div>
+          <div class="blog-text">
+            <span>10 Septembrie 2023 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/permalink.php?story_fbid=pfbid037WVpf192NGEPwvdzzCL6ztDpXWNvgJH8jP1uCLXdv9pySfedAWHuXMmkBUBW4icZl&id=100088809708240"
+              class="blog-title"
+            >
+              Beneficiile Glutationului
+            </a>
+            <p>
+              Glutationul injectabil se administrează cu ajutorul unei perfuzii
+              intravenoase, care durează aproximativ 15-20 minute. Perfuzia nu
+              este dureroasă iar riscurile injectării intravenoase a
+              glutationului sunt minime spre nule...
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/permalink.php?story_fbid=pfbid037WVpf192NGEPwvdzzCL6ztDpXWNvgJH8jP1uCLXdv9pySfedAWHuXMmkBUBW4icZl&id=100088809708240"
+            >
+              Citește mai mult
+            </a>
+          </div>
         </div>
+
+        <div class="blog-box">
+          <!-- BLOG BOX 3 -->
+          <div class="blog-img">
+            <img src="./assets/terapia biofotonica.jpg" alt="Blog" />
+          </div>
+
+          <div class="blog-text">
+            <span>28 Septembrie 2023 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/photo?fbid=284944637809191&set=a.108675302102793"
+              class="blog-title"
+            >
+              Terapia Biofotonică Transcraniană
+            </a>
+            <p>
+              Terapia biofotonica transcraniană este o formă de terapie
+              non-invazivă care utilizează un dispozitiv medical special pentru
+              a emite fotoni în regiunea craniana. Emisia este coerenta
+              concenrata și directionata fi....
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/photo?fbid=284944637809191&set=a.108675302102793"
+            >
+              Citește mai mult
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-box">
+          <!-- BLOG BOX 4 -->
+          <div class="blog-img">
+            <img src="./assets/Alergie Medicamente.jpg" alt="Blog" />
+          </div>
+
+          <div class="blog-text">
+            <span>17 August 2024 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26210858125224809&id=100001819359749&rdid=4r37E5fR6YRVV46L"
+              class="blog-title"
+            >
+              Alergiile la medicamente: Recunoaștere, prevenție și acțiuni
+              rapide
+            </a>
+            <p>
+              Alergia la medicamente poate fi gravă și periculoasă pentru viață.
+              Este esențial să recunoști simptomele și să eviți medicamentele
+              care provoacă reacții alergice. În caz de reacții severe,
+              administrează epinefrină și caută...
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26210858125224809&id=100001819359749&rdid=4r37E5fR6YRVV46L"
+            >
+              Citește mai mult
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-box">
+          <!-- BLOG BOX 5 -->
+          <div class="blog-img">
+            <img src="./assets/Tumorile sistemului nervos.jpg" alt="Blog" />
+          </div>
+
+          <div class="blog-text">
+            <span> 13 Septembrie 2024 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26508281652149120&id=100001819359749&rdid=cRRJhCR5dYYJnkjX"
+              class="blog-title"
+            >
+              Tumorile sistemului nervos central: Cauze, simptome și tratament
+            </a>
+            <p>
+              Tumorile sistemului nervos central, benigne sau maligne, apar din
+              creșterea necontrolată a celulelor anormale. Cauzele includ
+              expunerea la radiatii, factori genetici și înaintarea în vârstă.
+              Simptomele includ...
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26508281652149120&id=100001819359749&rdid=cRRJhCR5dYYJnkjX"
+            >
+              Citește mai mult
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-box">
+          <!-- BLOG BOX 6 -->
+          <div class="blog-img">
+            <img src="./assets/perfuzii cu vitamine.jpg" alt="Blog" />
+          </div>
+
+          <div class="blog-text">
+            <span> 6 Octombrie 2024 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26897310543246227&id=100001819359749&rdid=g2UtDU0R5bxjpyAE"
+              class="blog-title"
+            >
+              Perfuziile cu vitamine: Beneficii și componente esențiale
+            </a>
+            <p>
+              Perfuziile cu vitamine oferă nutrienți rapid prin administrare
+              intravenoasă, ajutând la corectarea deficiențelor, îmbunătățirea
+              stării de sănătate și recuperarea după efort sau boală. Acestea
+              conțin vitamine...
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26897310543246227&id=100001819359749&rdid=g2UtDU0R5bxjpyAE"
+            >
+              Citește mai mult
+            </a>
+          </div>
+        </div>
+
+        <div class="blog-box">
+          <!-- BLOG BOX 7 -->
+          <div class="blog-img">
+            <img src="./assets/ingrijire varstnici.jpg" alt="Blog" />
+          </div>
+
+          <div class="blog-text">
+            <span> 9 Octombrie 2024 / MedicalAs</span>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26954836044160343&id=100001819359749&rdid=WlWno4ViZhh46h9E"
+              class="blog-title"
+            >
+              Servicii de îngrijire la domiciliu pentru vârstnici
+            </a>
+            <p>
+              Oferim servicii de îngrijire la domiciliu pentru vârstnici,
+              inclusiv ajutor la igienă, îmbrăcare, pregătirea meselor și
+              administrarea tratamentelor. Echipa noastră se dedică cu empatie
+              și respect pentru a aduce confort și zâmbete în viețile
+              pacienților...
+            </p>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/story.php?story_fbid=26954836044160343&id=100001819359749&rdid=WlWno4ViZhh46h9E"
+            >
+              Citește mai mult
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="section__container footer__container">
-          <div class="footer__col">
-            <h3>Medical<span>As</span></h3>
-            <p>
-              Suntem onorați să facem parte din parcursul dumneavoastră medical și ne dedicăm să vă 
-              oferim îngrijire personalizată și de cea mai bună calitate pe tot parcursul acestuia.
-            </p>
-            <p class="no-show">
-              Acordați-ne încrederea dumneavoastră în îngrijirea sănătății și haideți să colaborăm 
-              pentru a atinge cele mai bune rezultate pentru dumneavoastră și pentru cei dragi.
-            </p>
-          </div>
-  
-          <div class="footer__col footer-links">
-            <h4>Descoperă</h4>
-            <a href="index.html"><p>Acasă</p></a>
-            <a href="services.html"><p>Servicii</p></a>
-            <a href="preturi.html"><p>Prețuri</p></a>
-            <a href="contact.html"><p>Contact</p></a>
-          </div>
-  
-          <div class="footer__col social-media-link">
-            <h4>Social Media</h4>
-            <span>
-              <a href="https://www.facebook.com/profile.php?id=100088809708240" target="_blank">
-                <i class="ri-facebook-circle-line"></i>
-              </a>
-            </span>
-          </div>
-  
-          <div class="footer__col">
-            <h4>Contactați-ne</h4>
-            <p>
-              <a href="https://www.google.com/maps/search/Adres%C4%83:+Str.+George+Enescu+nr.34,+Ap.1,+Sector+1/@44.444322,26.0963179,17z/data=!3m1!4b1?entry=ttu">
-                <i class="ri-map-pin-2-fill"></i> Adresă: Str. George Enescu nr.34, Ap.1, Sector 1
-              </a>
-            </p>
-  
-            <p>
-              <a href="mailto:office@medicalas.ro"><i class="ri-mail-fill"></i> office@medicalas.ro</a>
-            </p>
-  
-            <p>
-              <a href="tel:+40730029288"><i class="ri-phone-fill"></i>+40730029288</a>
-            </p>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Medical<span>As</span></h3>
+          <p>
+            Suntem onorați să facem parte din parcursul dumneavoastră medical și
+            ne dedicăm să vă oferim îngrijire personalizată și de cea mai bună
+            calitate pe tot parcursul acestuia.
+          </p>
+          <p class="no-show">
+            Acordați-ne încrederea dumneavoastră în îngrijirea sănătății și
+            haideți să colaborăm pentru a atinge cele mai bune rezultate pentru
+            dumneavoastră și pentru cei dragi.
+          </p>
+        </div>
+
+        <div class="footer__col footer-links">
+          <h4>Descoperă</h4>
+          <a href="index.html"><p>Acasă</p></a>
+          <a href="services.html"><p>Servicii</p></a>
+          <a href="preturi.html"><p>Prețuri</p></a>
+          <a href="contact.html"><p>Contact</p></a>
+        </div>
+
+        <div class="footer__col social-media-link">
+          <h4>Social Media</h4>
+          <span>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088809708240"
+              target="_blank"
+            >
+              <i class="ri-facebook-circle-line"></i>
+            </a>
+          </span>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contactați-ne</h4>
+          <p>
+            <a
+              href="https://www.google.com/maps/search/Adres%C4%83:+Str.+George+Enescu+nr.34,+Ap.1,+Sector+1/@44.444322,26.0963179,17z/data=!3m1!4b1?entry=ttu"
+            >
+              <i class="ri-map-pin-2-fill"></i> Adresă: Str. George Enescu
+              nr.34, Ap.1, Sector 1
+            </a>
+          </p>
+
+          <p>
+            <a href="mailto:office@medicalas.ro"
+              ><i class="ri-mail-fill"></i> office@medicalas.ro</a
+            >
+          </p>
+
+          <p>
+            <a href="tel:+40730029288"
+              ><i class="ri-phone-fill"></i>+40730029288</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p>
+            Copyright © Terra MedicalAs srl 2022. Toate drepturile rezervate.
+          </p>
+          <div class="footer__socials">
+            <span>Made By Bau David <i class="fa-regular fa-heart"></i> </span>
           </div>
         </div>
-        <div class="footer__bar">
-          <div class="footer__bar__content">
-            <p>Copyright © Terra MedicalAs srl 2022. Toate drepturile rezervate.</p>
-            <div class="footer__socials">
-              <span>Made By Bau David <i class="fa-regular fa-heart"></i> </span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+    </footer>
 
-
-      <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>

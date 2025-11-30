@@ -1,61 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MedicalAs - Contact</title>
 
     <!-- CSS LINK -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 
     <!-------------- REMIX ICONS LINK ----------->
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-    rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
     />
 
     <!-- FONT AWESOME LINK -->
-    <link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
-
-    <!--------------- GOOGLE ICONS LINK ---------------------->
-    <link rel="stylesheet" 
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
 
-    <!------------- SCROLL REVEAL LINK --------------> 
-    <script src="https://unpkg.com/scrollreveal"></script>    
-    
+    <!--------------- GOOGLE ICONS LINK ---------------------->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+
+    <!------------- SCROLL REVEAL LINK -------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17770196544"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-17770196544");
+    </script>
+
     <!-- CSS FOR CONTACT PAGE -->
     <style>
-:root {
-    --primary-color: #FF8A80;
-    --primary-color-dark: #8E0000;
-    --primary-color-light: #e9f7f7;
-    --secondary-color: #D32F2F;
-    --text-dark: #4E342E;
-    --text-light: #6D4C41;
-    --white: #ffffff;
-    --max-width: 1200px;
-}
+      :root {
+        --primary-color: #ff8a80;
+        --primary-color-dark: #8e0000;
+        --primary-color-light: #e9f7f7;
+        --secondary-color: #d32f2f;
+        --text-dark: #4e342e;
+        --text-light: #6d4c41;
+        --white: #ffffff;
+        --max-width: 1200px;
+      }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}        
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
 
-body{
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-color) 30%, var(--primary-color-light) 30%, var(--primary-color-light) 100%)
-}
+      body {
+        background: linear-gradient(
+          90deg,
+          var(--primary-color) 0%,
+          var(--primary-color) 30%,
+          var(--primary-color-light) 30%,
+          var(--primary-color-light) 100%
+        );
+      }
 
-.contact-us{
-    position: relative;
-    width: 100%;
-    padding: 40px 100px;
-}
+      .contact-us {
+        position: relative;
+        width: 100%;
+        padding: 40px 100px;
+      }
 
-/* .contact-us .contact-title{
+      /* .contact-us .contact-title{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,140 +92,140 @@ body{
     font-weight: 700;
 } */
 
-.form{
-    grid-area: form;
-}
+      .form {
+        grid-area: form;
+      }
 
-.info{
-    grid-area: info;
-}
+      .info {
+        grid-area: info;
+      }
 
-.map{
-    grid-area: map;
-}
+      .map {
+        grid-area: map;
+      }
 
-.contact{
-    padding: 40px;
-    background-color: #fff;
-    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
-}
+      .contact {
+        padding: 40px;
+        background-color: #fff;
+        box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+      }
 
-.box{
-    position: relative;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 5fr 4fr;
-    grid-template-areas:
-    "form info"
-    "form map";
-    grid-gap: 20px;
-    margin-top: 20px;
-}
+      .box {
+        position: relative;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 5fr 4fr;
+        grid-template-areas:
+          "form info"
+          "form map";
+        grid-gap: 20px;
+        margin-top: 20px;
+      }
 
-.box h3{
-    color: var(--secondary-color);
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
+      .box h3 {
+        color: var(--secondary-color);
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
 
-/* FORM SECTION */
-.form-box{
-    position: relative;
-    width: 100%;
-}
+      /* FORM SECTION */
+      .form-box {
+        position: relative;
+        width: 100%;
+      }
 
-.form-box .row50{
-    display: flex;
-    gap: 20px;
-}
+      .form-box .row50 {
+        display: flex;
+        gap: 20px;
+      }
 
-.input-box{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    width: 50%;
-}
+      .input-box {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        width: 50%;
+      }
 
-.form-box .row100 .input-box{
-    width: 100%;
-}
+      .form-box .row100 .input-box {
+        width: 100%;
+      }
 
-.input-box span{
-    color: var(--primary-color);
-    margin-top: 10px;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
+      .input-box span {
+        color: var(--primary-color);
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
 
-.input-box input{
-    padding: 10px;
-    font-size: 1.1rem;
-    outline: none;
-    border: 1px solid #333;
-}
+      .input-box input {
+        padding: 10px;
+        font-size: 1.1rem;
+        outline: none;
+        border: 1px solid #333;
+      }
 
-.input-box textarea{
-    padding: 10px;
-    font-size: 1.1rem;
-    outline: none;
-    border: 1px solid #333;
-    resize: none;
-    min-height: 220px;
-    margin-bottom: 10px;
-}
+      .input-box textarea {
+        padding: 10px;
+        font-size: 1.1rem;
+        outline: none;
+        border: 1px solid #333;
+        resize: none;
+        min-height: 220px;
+        margin-bottom: 10px;
+      }
 
-.input-box input[type="submit"]{
-    border: none;
-    max-width: 120px;
-}
+      .input-box input[type="submit"] {
+        border: none;
+        max-width: 120px;
+      }
 
-.input-box::placeholder{
-    color: #999;
-}
+      .input-box::placeholder {
+        color: #999;
+      }
 
-/* INFO BOX */
-.info{
-    background: var(--primary-color);
-}
+      /* INFO BOX */
+      .info {
+        background: var(--primary-color);
+      }
 
-.info h3{
-    padding-bottom: 20px;
-    color: #fff;
-}
+      .info h3 {
+        padding-bottom: 20px;
+        color: #fff;
+      }
 
-.info .info-box div{
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 5px;
-}
+      .info .info-box div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 5px;
+      }
 
-.info .info-box div span{
-    min-width: 40px;
-    height: 40px;
-    color: #fff;
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    border-radius: 50%;
-    margin-right: 15px;
-}
+      .info .info-box div span {
+        min-width: 40px;
+        height: 40px;
+        color: #fff;
+        background-color: var(--secondary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
 
-.info .info-box div p{
-    color: #fff;
-    font-size: 1.1rem;
-}
+      .info .info-box div p {
+        color: #fff;
+        font-size: 1.1rem;
+      }
 
-.info .info-box div a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
+      .info .info-box div a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+      }
 
-/* .sci{
+      /* .sci{
     margin-top: 40px;
     display: flex;
 }
@@ -215,118 +239,115 @@ body{
     color: var(--primary-color-dark);
 } */
 
-/* MAP BOX */
-.map{
-    padding: 0;
-}
+      /* MAP BOX */
+      .map {
+        padding: 0;
+      }
 
-.map iframe{
-    width: 100%;
-    height: 100%;
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 900px){
-    body{
-        background: var(--primary-color-light);
-    }
-    
-    .contact-us{
-        padding: 20px;
-    }
-
-    .box{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-        "form"
-        "info"
-        "map";
-    }
-
-    .form-box .row50{
-        display: flex;
-        gap: 0;
-        flex-direction: column;
-    }
-
-    .input-box{
+      .map iframe {
         width: 100%;
-    }
+        height: 100%;
+      }
 
-    .contact{
-        padding: 30px;
-    }
-    
-    .map{
-        min-height: 300px;
-        padding: 0px;
-    }  
-}
+      /* RESPONSIVE DESIGN */
+      @media (max-width: 900px) {
+        body {
+          background: var(--primary-color-light);
+        }
 
-/* NAVBAR CUSTOMIZATION */
-.nav-logo a{
-    color: var(--white);
-}
+        .contact-us {
+          padding: 20px;
+        }
 
- .navbar-menu .link a{
-    color: var(--text-dark);
-    transition: 0.3s;
-}
+        .box {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          grid-template-areas:
+            "form"
+            "info"
+            "map";
+        }
 
- .navbar-menu .link a:hover{
-    color: var(--primary-color);
-}
+        .form-box .row50 {
+          display: flex;
+          gap: 0;
+          flex-direction: column;
+        }
 
- @media(width < 900px){
-    .nav-logo a{
-        color: var(--primary-color);
-    }   
- }
+        .input-box {
+          width: 100%;
+        }
 
- @media (width < 700px){
-    .navbar-menu .link a{
-        color: var(--primary-color-light);
-    }
+        .contact {
+          padding: 30px;
+        }
 
-     .navbar-menu .link a:hover{
+        .map {
+          min-height: 300px;
+          padding: 0px;
+        }
+      }
+
+      /* NAVBAR CUSTOMIZATION */
+      .nav-logo a {
         color: var(--white);
-    }
+      }
 
-    .navbar-menu .contact-link{
-        display: none;
-    }
+      .navbar-menu .link a {
+        color: var(--text-dark);
+        transition: 0.3s;
+      }
 
-    .box h3{
-        text-align: center;
-    }
- }    
+      .navbar-menu .link a:hover {
+        color: var(--primary-color);
+      }
 
-/* FOOTER CUSTOMIZATION */
-.footer{
-    background-color: var(--white);
-}
+      @media (width < 900px) {
+        .nav-logo a {
+          color: var(--primary-color);
+        }
+      }
 
-.social-media-link span i{
-    background-color: var(--white);
-}
+      @media (width < 700px) {
+        .navbar-menu .link a {
+          color: var(--primary-color-light);
+        }
 
+        .navbar-menu .link a:hover {
+          color: var(--white);
+        }
+
+        .navbar-menu .contact-link {
+          display: none;
+        }
+
+        .box h3 {
+          text-align: center;
+        }
+      }
+
+      /* FOOTER CUSTOMIZATION */
+      .footer {
+        background-color: var(--white);
+      }
+
+      .social-media-link span i {
+        background-color: var(--white);
+      }
     </style>
-</head>
+  </head>
 
-
-<body>
-
+  <body>
     <!--------------------- NAV SECTION ------------------------------->
     <nav class="section__container nav__container">
-        <div class="nav-logo"><a href="index.html">Medical<span>As</span></a></div>
+      <div class="nav-logo">
+        <a href="index.html">Medical<span>As</span></a>
+      </div>
 
-        <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
-        <button class="navbar-burger" type="button" onclick="toggleMenuOpen()">
-          <span class="material-symbols-outlined">
-            menu
-          </span>
-        </button>
+      <div class="navbar-overlay" onclick="toggleMenuOpen()"></div>
+      <button class="navbar-burger" type="button" onclick="toggleMenuOpen()">
+        <span class="material-symbols-outlined"> menu </span>
+      </button>
 
       <nav class="navbar-menu">
         <ul>
@@ -337,153 +358,197 @@ body{
           <a href="contact.html"><li class="contact-link">Contact</li></a>
         </ul>
       </nav>
-    </nav>    
-
-
+    </nav>
 
     <div class="contact-us">
-        <!-- <div class="contact-title">
+      <!-- <div class="contact-title">
             <h2>Lasă-ne un mesaj</h2>
         </div> -->
-        <div class="box">
+      <div class="box">
+        <!-- Form -->
+        <div class="contact form">
+          <h3>Lasă-ne un mesaj</h3>
+          <form action="https://formspree.io/f/xanweedw" method="post">
+            <div class="form-box">
+              <div class="row50">
+                <div class="input-box">
+                  <label for="lastName">Nume</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Ion"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <label for="firstName">Prenume</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Andrei"
+                    required
+                  />
+                </div>
+              </div>
 
-            <!-- Form -->
-            <div class="contact form">
-                <h3>Lasă-ne un mesaj</h3>
-                <form action="https://formspree.io/f/xanweedw" method="post">
-                    <div class="form-box">
-                        <div class="row50">
-                            <div class="input-box">
-                                <label for="lastName">Nume</label>
-                                <input type="text" id="lastName" name="lastName" placeholder="Ion" required>
-                            </div>
-                            <div class="input-box">
-                                <label for="firstName">Prenume</label>
-                                <input type="text" id="firstName" name="firstName" placeholder="Andrei" required>
-                            </div>
-                        </div>
+              <div class="row50">
+                <div class="input-box">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="ion22andrei@yahoo.com"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <label for="phoneNumber">Telefon</label>
+                  <input
+                    type="number"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="+40 532 453 595"
+                    required
+                  />
+                </div>
+              </div>
 
-                        <div class="row50">
-                            <div class="input-box">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="ion22andrei@yahoo.com" required>
-                            </div>
-                            <div class="input-box">
-                                <label for="phoneNumber">Telefon</label>
-                                <input type="number" id="phoneNumber" name="phoneNumber" placeholder="+40 532 453 595" required>
-                            </div>
-                        </div>
+              <div class="row100">
+                <div class="input-box">
+                  <label for="message">Mesaj</label>
+                  <textarea
+                    type="text"
+                    id="message"
+                    name="message"
+                    placeholder="Scrie mesajul tau aici..."
+                    required
+                  ></textarea>
+                </div>
+              </div>
 
-                        <div class="row100">
-                            <div class="input-box">
-                                <label for="message">Mesaj</label>
-                                <textarea type="text" id="message" name="message" placeholder="Scrie mesajul tau aici..." required></textarea>
-                            </div>
-                        </div>
+              <div class="row100">
+                <div class="input-box">
+                  <input type="submit" value="Submit" />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
 
-                        <div class="row100">
-                            <div class="input-box">
-                                <input type="submit" value="Submit">
-                            </div>
-                        </div>
-                    </div>
-                </form>
+        <!-- Info Box -->
+        <div class="contact info">
+          <h3>Informații Contact</h3>
+          <div class="info-box">
+            <div>
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <p>Str George Enescu nr.34, Ap.1 <br />Sector 1</p>
             </div>
 
-            <!-- Info Box -->
-            <div class="contact info">
-                <h3>Informații Contact</h3>
-                <div class="info-box">
-                    <div>
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        <p>Str George Enescu nr.34, Ap.1 <br>Sector 1</p>
-                    </div>
+            <div>
+              <span><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:office@medicalas.ro">office@medicalas.ro</a>
+            </div>
 
-                    <div>
-                        <span><i class="fa-solid fa-envelope"></i></span>
-                        <a href="mailto:office@medicalas.ro">office@medicalas.ro</a>
-                    </div>
-
-                    <div>
-                        <span><i class="fa-solid fa-phone"></i></span>
-                        <a href="tel:+40730029288">+40730029288</a>
-                    </div>
-                    <!-- SOCIAL MEDIA LINKS -->
-                    <!-- <ul class="sci">
+            <div>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:+40730029288">+40730029288</a>
+            </div>
+            <!-- SOCIAL MEDIA LINKS -->
+            <!-- <ul class="sci">
                         <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
                     </ul> -->
-                </div>
-            </div>
-
-            <!-- Map -->
-            <div class="contact map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.459411030942!2d26.097244906950323!3d44.4442500909172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4e6f882213%3A0x40bee8235aa9561!2sStrada%20George%20Enescu%2034%2C%20Bucure%C8%99ti%20010307!5e0!3m2!1sen!2sro!4v1705025290875!5m2!1sen!2sro" 
-            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+          </div>
         </div>
+
+        <!-- Map -->
+        <div class="contact map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.459411030942!2d26.097244906950323!3d44.4442500909172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1ff4e6f882213%3A0x40bee8235aa9561!2sStrada%20George%20Enescu%2034%2C%20Bucure%C8%99ti%20010307!5e0!3m2!1sen!2sro!4v1705025290875!5m2!1sen!2sro"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </div>
 
     <!-- FOOTER SECTION -->
     <footer class="footer">
-        <div class="section__container footer__container">
-          <div class="footer__col">
-            <h3>Medical<span>As</span></h3>
-            <p>
-              Suntem onorați să facem parte din parcursul dumneavoastră medical și ne dedicăm să vă 
-              oferim îngrijire personalizată și de cea mai bună calitate pe tot parcursul acestuia.
-            </p>
-            <p class="no-show">
-              Acordați-ne încrederea dumneavoastră în îngrijirea sănătății și haideți să colaborăm 
-              pentru a atinge cele mai bune rezultate pentru dumneavoastră și pentru cei dragi.
-            </p>
-          </div>
-  
-          <div class="footer__col footer-links">
-            <h4>Descoperă</h4>
-            <a href="index.html"><p>Acasă</p></a>
-            <a href="services.html"><p>Servicii</p></a>
-            <a href="preturi.html"><p>Prețuri</p></a>
-            <a href="blog.html"><p>Blog</p></a>
-          </div>
-  
-          <div class="footer__col social-media-link">
-            <h4>Social Media</h4>
-            <span>
-              <a href="https://www.facebook.com/profile.php?id=100088809708240" target="_blank">
-                <i class="ri-facebook-circle-line"></i>
-              </a>
-            </span>
-          </div>
-  
-          <div class="footer__col">
-            <h4>Contactați-ne</h4>
-            <p>
-              <a href="https://www.google.com/maps/search/Adres%C4%83:+Str.+George+Enescu+nr.34,+Ap.1,+Sector+1/@44.444322,26.0963179,17z/data=!3m1!4b1?entry=ttu">
-                <i class="ri-map-pin-2-fill"></i> Adresă: Str. George Enescu nr.34, Ap.1, Sector 1
-              </a>
-            </p>
-  
-            <p>
-              <a href="mailto:office@medicalas.ro"><i class="ri-mail-fill"></i> office@medicalas.ro</a>
-            </p>
-  
-            <p>
-              <a href="tel:+40730029288"><i class="ri-phone-fill"></i>+40730029288</a>
-            </p>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>Medical<span>As</span></h3>
+          <p>
+            Suntem onorați să facem parte din parcursul dumneavoastră medical și
+            ne dedicăm să vă oferim îngrijire personalizată și de cea mai bună
+            calitate pe tot parcursul acestuia.
+          </p>
+          <p class="no-show">
+            Acordați-ne încrederea dumneavoastră în îngrijirea sănătății și
+            haideți să colaborăm pentru a atinge cele mai bune rezultate pentru
+            dumneavoastră și pentru cei dragi.
+          </p>
+        </div>
+
+        <div class="footer__col footer-links">
+          <h4>Descoperă</h4>
+          <a href="index.html"><p>Acasă</p></a>
+          <a href="services.html"><p>Servicii</p></a>
+          <a href="preturi.html"><p>Prețuri</p></a>
+          <a href="blog.html"><p>Blog</p></a>
+        </div>
+
+        <div class="footer__col social-media-link">
+          <h4>Social Media</h4>
+          <span>
+            <a
+              href="https://www.facebook.com/profile.php?id=100088809708240"
+              target="_blank"
+            >
+              <i class="ri-facebook-circle-line"></i>
+            </a>
+          </span>
+        </div>
+
+        <div class="footer__col">
+          <h4>Contactați-ne</h4>
+          <p>
+            <a
+              href="https://www.google.com/maps/search/Adres%C4%83:+Str.+George+Enescu+nr.34,+Ap.1,+Sector+1/@44.444322,26.0963179,17z/data=!3m1!4b1?entry=ttu"
+            >
+              <i class="ri-map-pin-2-fill"></i> Adresă: Str. George Enescu
+              nr.34, Ap.1, Sector 1
+            </a>
+          </p>
+
+          <p>
+            <a href="mailto:office@medicalas.ro"
+              ><i class="ri-mail-fill"></i> office@medicalas.ro</a
+            >
+          </p>
+
+          <p>
+            <a href="tel:+40730029288"
+              ><i class="ri-phone-fill"></i>+40730029288</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <div class="footer__bar__content">
+          <p>
+            Copyright © Terra MedicalAs srl 2022. Toate drepturile rezervate.
+          </p>
+          <div class="footer__socials">
+            <span>Made By Bau David <i class="fa-regular fa-heart"></i> </span>
           </div>
         </div>
-        <div class="footer__bar">
-          <div class="footer__bar__content">
-            <p>Copyright © Terra MedicalAs srl 2022. Toate drepturile rezervate.</p>
-            <div class="footer__socials">
-              <span>Made By Bau David <i class="fa-regular fa-heart"></i> </span>
-            </div>
-          </div>
-        </div>
-      </footer>     
+      </div>
+    </footer>
 
     <script src="index.js"></script>
-</body>
-
-
+  </body>
 </html>
