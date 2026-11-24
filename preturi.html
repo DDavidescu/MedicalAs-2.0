@@ -58,143 +58,181 @@
             color: var(--primary-color);
         }
 
+        /* ---------- PRICING CARDS ---------- */
         .wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            color: rgba(0, 0, 0, 0.7);
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
+            align-items: stretch;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 24px 20px 20px;
+            font-family: "Poppins", sans-serif;
         }
 
         .wrapper .card {
-            font-family: "Poppins", sans-serif;
-            max-width: 300px;
-            background-color: var(--primary-color-light);
-            padding: 20px;
-            margin: 30px 15px;
-            border-radius: 10px;
-            box-shadow: 5px 5px 20px rgba(255, 138, 128, 0.4),
-                3px 3px 10px -1px rgba(255, 255, 255, 0.7);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 26px 28px;
+            background-color: var(--white);
+            border: 1px solid rgba(255, 138, 128, 0.35);
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(142, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* For Active Card */
-        .wrapper .card.active {
-            background-color: var(--primary-color);
-            transform: scale(1, 1.09);
-            font-weight: 500;
+        .wrapper .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(142, 0, 0, 0.12);
         }
 
+        /* Plan name as a pill badge */
         .wrapper .card h3 {
-            margin-bottom: 15px;
-        }
-
-        /* For Active Card */
-        .wrapper .card.active {
-            color: rgba(255, 255, 255, 1);
-            ;
+            align-self: flex-start;
+            margin: 0;
+            padding: 6px 16px;
+            border-radius: 999px;
+            background-color: rgba(255, 138, 128, 0.15);
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         .wrapper .card h5 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: rgba(0, 0, 0, 1);
+            margin: 20px 0 4px;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #2b2b2b;
         }
-
-        /* For Active Card */
-        .wrapper .card.active h5 {
-            color: rgba(255, 255, 255, 1);
-            ;
-        }
-
 
         .wrapper .card h5 span {
-            font-size: 20px;
-            color: rgba(0, 0, 0, 0.7);
+            font-size: 1rem;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.5);
         }
-
-        .wrapper .card h6 {
-            font-size: 18px;
-        }
-
-        .wrapper .card h6 span {
-            font-size: 15px;
-        }
-
-        /* For Active Card */
-        .wrapper .card.active h5 span {
-            color: rgba(255, 255, 255, 0.9);
-            ;
-        }
-
 
         .wrapper .card p {
-            margin: 20px 0;
-            color: rgba(0, 0, 0, 0.6);
+            margin: 10px 0 22px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
             font-size: 14px;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: rgba(0, 0, 0, 0.6);
         }
-
-        /* For Active Card */
-        .wrapper .card.active p {
-            color: rgba(255, 255, 255, 1);
-            ;
-        }
-
 
         .wrapper .card ul {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 28px;
+            padding: 0;
             list-style: none;
         }
 
+        /* Rows grow equally to fill the card, so shorter lists have no empty gap at the bottom */
         .wrapper .card ul li {
-            line-height: 3;
-            color: rgba(0, 0, 0, 0.9);
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            font-size: 14.5px;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.8);
         }
 
-        /* For Active Card */
-        .wrapper .card.active ul li {
-            color: rgba(255, 255, 255, 0.9);
-            ;
+        .wrapper .card ul li:last-child {
+            border-bottom: none;
         }
-
 
         .wrapper .card ul li i {
+            flex-shrink: 0;
             color: var(--primary-color);
-            margin-right: 10px;
         }
 
-        /* For Active Card */
-        .wrapper .card.active ul li i {
-            color: var(--secondary-color);
+        .wrapper .card.active ul li {
+            border-bottom-color: rgba(255, 255, 255, 0.2);
         }
-
 
         .wrapper .card a {
-            margin: 20px 0;
+            margin-top: auto;
             display: block;
+            padding: 14px;
+            border: 1.5px solid var(--primary-color);
+            border-radius: 10px;
+            color: var(--secondary-color);
+            font-weight: 600;
             text-align: center;
             text-decoration: none;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: 0.4s;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
         }
 
-        /* For Active Card */
+        .wrapper .card a:hover,
+        .wrapper .card a:focus-visible {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .wrapper .card a:focus-visible {
+            outline: 3px solid rgba(211, 47, 47, 0.35);
+            outline-offset: 3px;
+        }
+
+        /* ---------- POPULAR (highlighted) CARD ---------- */
+        .wrapper .card.active {
+            z-index: 1;
+            background: linear-gradient(160deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-color: transparent;
+            box-shadow: 0 24px 50px rgba(211, 47, 47, 0.35);
+            transform: translateY(-16px);
+        }
+
+        .wrapper .card.active:hover {
+            transform: translateY(-22px);
+            box-shadow: 0 30px 60px rgba(211, 47, 47, 0.42);
+        }
+
+        .wrapper .card.active h3 {
+            background-color: rgba(255, 255, 255, 0.22);
+            color: var(--white);
+        }
+
+        .wrapper .card.active h5,
+        .wrapper .card.active ul li,
+        .wrapper .card.active ul li i {
+            color: var(--white);
+        }
+
+        .wrapper .card.active h5 span {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .wrapper .card.active p {
+            color: rgba(255, 255, 255, 0.92);
+            border-bottom-color: rgba(255, 255, 255, 0.3);
+        }
+
         .wrapper .card.active a {
-            background-color: white;
+            background-color: var(--white);
+            border-color: var(--white);
             color: var(--secondary-color);
         }
 
-        .wrapper .card a:hover {
-            background-color: var(--primary-color);
-            color: white;
+        .wrapper .card.active a:hover,
+        .wrapper .card.active a:focus-visible {
+            background-color: var(--primary-color-dark);
+            border-color: var(--primary-color-dark);
+            color: var(--white);
         }
 
-        /* For Active Card */
-        .wrapper .card.active a:hover {
-            border: 1px solid var(--secondary-color);
-            background-color: var(--secondary-color);
+        .wrapper .card.active a:focus-visible {
+            outline-color: rgba(255, 255, 255, 0.6);
         }
 
         /* TABLE SECTION CSS */
@@ -270,17 +308,42 @@
 
         /* RESPONSIVE DESIGN */
 
+        /* Tablet: 2 columns, Popular first */
         @media (max-width: 1200px) {
             .wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                max-width: 760px;
             }
 
-            .active {
+            .wrapper .card.active {
                 order: -1;
+                transform: none;
+            }
+
+            .wrapper .card.active:hover {
+                transform: translateY(-6px);
+            }
+        }
+
+        /* Mobile: single column */
+        @media (max-width: 640px) {
+            .pricing-section h1 {
+                padding-bottom: 2.5rem;
+            }
+
+            .wrapper {
+                grid-template-columns: 1fr;
+                max-width: 440px;
+                gap: 20px;
+                padding: 8px 16px 16px;
+            }
+
+            .wrapper .card {
+                padding: 28px 22px 24px;
+            }
+
+            .wrapper .card h5 {
+                font-size: 1.75rem;
             }
         }
     </style>
@@ -394,33 +457,6 @@
                     <h5>3.100 Lei <span>/ Lună</span></h5>
                     <!-- <h6>650 Lei <span>/ Săptămână</span></h6> -->
                     <p>Acest pachet include vizite la domiciliu, cu o durată de 3 ore pe zi, timp de 3 zile pe
-                        săptămână.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-square-check"></i>Igienă corporală</li>
-                        <li><i class="fa-solid fa-square-check"></i>Îmbrăcare și dezbrăcare</li>
-                        <li><i class="fa-solid fa-square-check"></i>Igiena corporală</li>
-                        <li><i class="fa-solid fa-square-check"></i>Hrănire și hidratare</li>
-                        <li><i class="fa-solid fa-square-check"></i>Prepararea hranei, ajutor la prepararea acesteia sau
-                            livrarea acesteia</li>
-                        <li><i class="fa-solid fa-square-check"></i>Ridicarea rețetelor</li>
-                        <li><i class="fa-solid fa-square-check"></i>Administrarea medicamentelor</li>
-                        <li><i class="fa-solid fa-square-check"></i>Efectuarea de cumpărături</li>
-                        <li><i class="fa-solid fa-square-check"></i>Plata facturilor</li>
-                        <li><i class="fa-solid fa-square-check"></i>Activități de menaj ușor (aspirat, schimbarea
-                            lenjeriei de pat, curățarea hainelor doar la mașina automată de rufe)</li>
-                        <li><i class="fa-solid fa-square-check"></i>Însoțirea în mijloacele de transport</li>
-                        <li><i class="fa-solid fa-square-check"></i>Facilitarea deplasării în exterior</li>
-                        <li><i class="fa-solid fa-square-check"></i>Companie și socializare</li>
-                    </ul>
-                    <a href="contact.html">Alege Planul</a>
-
-                </div>
-
-                <div class="card">
-                    <h3>Ultimate</h3>
-                    <h5>5.780 Lei <span>/ Lună</span></h5>
-                    <!-- <h6>1.320 Lei <span>/ Săptămână</span></h6> -->
-                    <p>Acest pachet include vizite la domiciliu, cu o durată de 8 ore pe zi, timp de 5 zile pe
                         săptămână.</p>
                     <ul>
                         <li><i class="fa-solid fa-square-check"></i>Igienă corporală</li>
